@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+
+<body>
+    <h1>Queres namorar comigo?</h1>
+    <form action="index copy.html">
+        <button type="submit">Sim</button>
+        <button id="nao" type="button">Não</button>
+    </form>
+
+    <script>
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        let botao = document.getElementById('nao');
+        botao.addEventListener('mouseover', function fugirBotao() {
+            let randomNumber = getRandomInt(1, 98);
+            console.log(randomNumber);
+            let randomNumber2 = getRandomInt(1, 98);
+            console.log(randomNumber2);
+
+            botao.style.position = 'absolute';
+            botao.style.top = randomNumber + '%';
+            botao.style.left = randomNumber2 + '%';
+        })
+
+    </script>
+</body>
+
+</html>
